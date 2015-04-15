@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head lang="es">
+    <meta charset="UTF-8">
+    <title>2</title>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+    <script src="app.js"></script>
+</head>
+<body ng-controller="ejemploController">
+    <h1 ng-mouseover="punteroRatonEncima()" ng-mouseout="punteroRatonFuera()">{{mensaje}}</h1>
+    
+    <button ng-click="cambiarMensaje(1)">Cambio mensaje despedida </button>
+    <button ng-click="cambiarMensaje(0)">Cambio mensaje bienvenida </button>
+
+</body>
+</html>
