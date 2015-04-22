@@ -34,8 +34,8 @@ app.controller("seguroController", function($scope, $log, $http){
         return ($scope.seguro.sexo=='M')
     };
 
-    //http
-    var config={
+    //http código paso a paso
+    /*var config={
         method:"GET",
         url: "datos.json"
     };
@@ -48,6 +48,16 @@ app.controller("seguroController", function($scope, $log, $http){
 
     response.error(function(data, status, headers, config){
        alert("Ha fallado la petición. Estado HTTP:"+status);
+    });
+    */
+    //http código unido
+    $http({
+        method: 'GET',
+        url: 'datos.json'
+    }).success(function(data, status, headers, config){
+        $scope.seguro = data;
+    }).error(function(data, status, headers, config){
+        alert("Ha fallado la petición. Estado HTTP:"+status);
     });
 
 });
