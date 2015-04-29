@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head lang="es">
+    <meta charset="UTF-8">
+    <title>17 - directivas</title>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+    
+    <script src="app.js"></script>
+</head>
+<body ng-controller="defaultController">
+    Mal puesto<br>
+    <img src="{{fileImg}}" alt=""/>
+    Correcto<br>
+    <img ng-src="{{fileImg}}" alt="OK" />
+</body>
+</html>
