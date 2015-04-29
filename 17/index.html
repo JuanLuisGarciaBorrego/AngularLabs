@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head lang="es">
+    <meta charset="UTF-8">
+    <title>17 - directivas</title>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+
+    <!-- Hace falta para cargar ng-bind-html -->
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular-sanitize.js"></script>
+
+
+    <script src="app.js"></script>
+</head>
+<body ng-controller="defaultController">
+    Aquí utiliza {[]}<br>
+    Ancho <b>{{ancho}}</b><br>
+    Aquí utiliza ng-bind<br>
+    Alto <b ng-bind="alto"></b>
+    <br>
+    Aquí utiliza ng-bind-html
+    <article ng-bind-html="area">
+    </article>
+    <hr/>
+    Aquí utiliza ng-non-bindable
+    Ancho <div ng-non-bindable>{{ancho}}</div>
+</html>
