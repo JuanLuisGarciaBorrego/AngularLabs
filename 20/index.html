@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head lang="es">
+    <meta charset="UTF-8">
+    <title>20 ng-repeat</title>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+    
+    <script src="app.js"></script>
+</head>
+<body ng-controller="defaultController">
+    <select>
+        <option ng-repeat="localidad in localidades" value="{{localidad.id}}">{{localidad.nombre}}</option>
+    </select>
+</body>
+</html>
