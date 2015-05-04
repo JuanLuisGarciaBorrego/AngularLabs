@@ -16,6 +16,7 @@ app.controller("defaultController", function($scope){
             idLocalidad:3,
             nombre: "Gilena"
         }
+    ];
 
-    ]
+    $scope.miLocalidadSeleccionada = null;
 });

@@ -8,8 +8,15 @@
     <script src="app.js"></script>
 </head>
 <body ng-controller="defaultController">
+    ng-repeat:
     <select>
         <option ng-repeat="localidad in localidades" value="{{localidad.id}}">{{localidad.nombre}}</option>
     </select>
+    <hr>
+    ng-options:
+    <select ng-model="miLocalidadSeleccionada" ng-options="localidad as localidad.nombre for localidad in localidades track by localidad.idLocalidad">
+        <option value="">--Elige opción--</option>
+    </select>
+
 </body>
 </html>
