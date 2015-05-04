@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head lang="es">
+    <meta charset="UTF-8">
+    <title>22 ng-style</title>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+    
+    <script src="app.js"></script>
+</head>
+<body ng-controller="defaultController">
+
+    Color Texto: <input type="text" ng-model="estilo.color"><br>
+    Color fondo: <input type="text" ng-model="estilo.background"><br>
+    <hr>
+    <div ng-style="estilo"> Eiiiii </div>
+</body>
+</html>
