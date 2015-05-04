@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head lang="es">
+    <meta charset="UTF-8">
+    <title>22 filtros escalares</title>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+    <link rel="stylesheet" href="stye.css"/>
+    
+    <script src="app.js"></script>
+</head>
+<body ng-controller="defaultController">
+    <h2>Order By</h2>
+    <table>
+
+        <tr ng-repeat="provincia in provincias | orderBy:'nombre'">
+            <td>{{provincia.codProvincia}}</td>
+            <td>{{provincia.nombre}}</td>
+        </tr>
+
+    </table>
+
+    <hr/>
+
+    <table>
+
+        <tr ng-repeat="provincia in provincias | orderBy:['nombre','codProvincia']">
+            <td>{{provincia.codProvincia}}</td>
+            <td>{{provincia.nombre}}</td>
+        </tr>
+
+    </table>
+
+    <hr/>
+
+    <table>
+        <tr ng-repeat="provincia in provincias | orderBy:'-nombre'">
+            <td>{{provincia.codProvincia}}</td>
+            <td>{{provincia.nombre}}</td>
+        </tr>
+    </table>
+    <h2>limitTo</h2>
+
+    <table>
+        <tr ng-repeat="provincia in provincias | limitTo:2">
+            <td>{{provincia.codProvincia}}</td>
+            <td>{{provincia.nombre}}</td>
+        </tr>
+    </table>
+    <hr/>
+    <table>
+        <tr ng-repeat="provincia in provincias | limitTo:-2">
+            <td>{{provincia.codProvincia}}</td>
+            <td>{{provincia.nombre}}</td>
+        </tr>
+    </table>
+
+</body>
+</html>
