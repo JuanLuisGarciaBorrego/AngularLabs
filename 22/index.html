@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head lang="es">
+    <meta charset="UTF-8">
+    <title>22 ng-switch</title>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+    
+    <script src="app.js"></script>
+</head>
+<body ng-controller="defaultController">
+    Escribe una "A" o una "B" o cualquier otra cosa:<input ng-model="valor">
+       <div ng-switch on="valor">
+           <div ng-switch-when="A">Es A</div>
+           <div ng-switch-when="B">Es B</div>
+           <div ng-switch-default>Texto default</div>
+       </div>
+
+</body>
+</html>
